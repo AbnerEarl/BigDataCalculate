@@ -14,27 +14,34 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-            <!--<intent-filter>
+
+            <!--
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            </intent-filter>
+            -->
         </activity>
         <activity android:name=".Main2Activity" />
         <activity android:name=".Main3Activity" />
         <activity android:name=".Main4Activity" />
         <activity
             android:name=".WelcomeActivity"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" >
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HomeActivity">
-
-        </activity>
-        <activity android:name=".MainActivityFor21"></activity>
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".MainActivityFor21" />
+        <activity android:name=".SelectDataActivity" />
+        <activity android:name=".ComputeAllActivity" />
+        <activity android:name=".StepComputeActivity" />
+        <activity android:name=".InputSevenActivity" />
+        <activity android:name=".InputTewteenActivity" />
+        <activity android:name=".ResultActivity"></activity>
     </application>
 
 </manifest>

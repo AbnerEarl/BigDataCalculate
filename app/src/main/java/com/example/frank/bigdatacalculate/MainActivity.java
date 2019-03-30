@@ -63,25 +63,6 @@ public class MainActivity extends AppCompatActivity {
         CheckPermissionUtils.verifyStoragePermissions(MainActivity.this);
         deleteDir(sdcardPath);
 
-        String myString = "2028-12-16";
-        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");//设置日期格式
-        String nowDate = df.format(new Date());// new Date()为获取当前系统时间
-        Date d = null,nowd=null;
-        try {
-            d = df.parse(myString);
-            nowd=df.parse(nowDate);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        boolean flag = nowd.before(d);
-        if(flag){
-
-        }
-        else{
-            finish();
-            System.exit(0);
-        }
-
         calculateStart=findViewById(R.id.button);
         if (tagOP!=null&&tagOP.equals("21")){
             calculateStart.setText("下一步，输入21个自定义数据");
@@ -316,10 +297,14 @@ public class MainActivity extends AppCompatActivity {
                                     for (int i = 0; i < input5.length; i++) {
                                         for (int j = i + 1; j < input5.length; j++) {
                                             int finalD = (input5[i] + input5[j]);
-                                            if (finalD > 49) {
-                                                finalD %= 49;
+                                            if (finalD>0) {
+                                                if (finalD > 49) {
+                                                    finalD %= 49;
+                                                }
+                                                Tools.saveRecord(finalD + "", DataResult.a51);
+                                            }else {
+                                                Tools.saveRecord(49 + "", DataResult.a51);
                                             }
-                                            Tools.saveRecord(finalD + "", DataResult.a51);
                                         }
                                     }
 
@@ -441,6 +426,7 @@ public class MainActivity extends AppCompatActivity {
                 inputReaderTem=new InputStreamReader(new FileInputStream(file));
                 bfTem= new BufferedReader(inputReaderTem);
                 for(int k=0;k<tag;k++){
+
                     if((strTem = bfTem.readLine()) != null){
 
                     }else{
@@ -452,10 +438,14 @@ public class MainActivity extends AppCompatActivity {
                 while((strTem = bfTem.readLine()) != null) {
                     int finalD=originD+Integer.parseInt(strTem);
                     //进行数据判断
-                    if(finalD>49){
-                        finalD%=49;
+                    if (finalD>0) {
+                        if (finalD > 49) {
+                            finalD %= 49;
+                        }
+                        Tools.saveRecord(finalD + "", newFileName);
+                    }else {
+                        Tools.saveRecord(49 + "", newFileName);
                     }
-                    Tools.saveRecord(finalD+"", newFileName);
                 }
             }
             bf.close();

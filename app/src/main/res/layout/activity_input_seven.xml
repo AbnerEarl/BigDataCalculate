@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InputSevenActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/line7data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <EditText
+                android:id="@+id/et7_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/editext_shape"
+                android:hint="请输入7个数的第1组，英文逗号分隔！" />
+
+            <EditText
+                android:id="@+id/et7_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/editext_shape"
+                android:hint="请输入7个数的第2组，英文逗号分隔！" />
+
+            <EditText
+                android:id="@+id/et7_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/editext_shape"
+                android:hint="请输入7个数的第3组，英文逗号分隔！" />
+
+            <EditText
+                android:id="@+id/et7_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/editext_shape"
+                android:hint="请输入7个数的第4组，英文逗号分隔！" />
+
+            <EditText
+                android:id="@+id/et7_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/editext_shape"
+                android:hint="请输入7个数的第5组，英文逗号分隔！" />
+
+            <EditText
+                android:id="@+id/et7_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/editext_shape"
+                android:hint="请输入7个数的第6组，英文逗号分隔！" />
+
+            <EditText
+                android:id="@+id/et7_7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/editext_shape"
+                android:hint="请输入7个数的第7组，英文逗号分隔！" />
+
+            <EditText
+                android:id="@+id/et7_8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/editext_shape"
+                android:hint="请输入7个数的第8组，英文逗号分隔！" />
+
+            <EditText
+                android:id="@+id/et7_9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/editext_shape"
+                android:hint="请输入7个数的第9组，英文逗号分隔！" />
+
+            <EditText
+                android:id="@+id/et7_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/editext_shape"
+                android:hint="请输入7个数的第10组，英文逗号分隔！" />
+
+            <EditText
+                android:id="@+id/et7_11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/editext_shape"
+                android:hint="请输入7个数的第11组，英文逗号分隔！" />
+
+            <Button
+                android:id="@+id/get7data"
+                android:text="下一步"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

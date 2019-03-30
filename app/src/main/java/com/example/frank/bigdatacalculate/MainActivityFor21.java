@@ -405,10 +405,14 @@ public class MainActivityFor21 extends AppCompatActivity {
                 while((strTem = bfTem.readLine()) != null) {
                     int finalD=originD+Integer.parseInt(strTem);
                     //进行数据判断
-                    if(finalD>49){
-                        finalD%=49;
+                    if (finalD>0) {
+                        if (finalD > 49) {
+                            finalD %= 49;
+                        }
+                        Tools.saveRecordFor21(finalD + "", newFileName);
+                    }else {
+                        Tools.saveRecordFor21(49 + "", newFileName);
                     }
-                    Tools.saveRecordFor21(finalD+"", newFileName);
                 }
             }
             bf.close();
